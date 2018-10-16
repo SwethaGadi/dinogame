@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">DinoWorld</string>
+    <string name="dino_question">Where is  </string>
+
+    <string name="LOG_TAG"> SWETHA </string>
+    <string name="LOG_TTS_NULL">Init TTS before speaking </string>
+    <string name="LOG_TTS_ERROR">TTSError </string>
+
+    <string name="HOME_NAMEALERT_TITLE">Enter your Name </string>
+    <string name="HOME_NAMEALERT_ERROR">Name cannot be empty </string>
+    <string name="NAME_CONSTANT">Name </string>
+
+    <string name="GAME_ALERT_TITLE"> GAME REPORT </string>
+    <string name="GAME_ALERT_EXPERT">DINO EXPERT</string>
+    <string name="GAME_ALERT_GREAT">GREAT JOB </string>
+    <string name="GAME_ALERT_GOOD">GOOD JOB </string>
+    <string name="GAME_ALERT_CORRECT">GOOD JOB </string>
+    <string name="GAME_ALERT_WRONG">GOOD JOB </string>
+
+
+
+    <string name="TTS_INIT_FAIL"> FAILED TO INITIALIZE TTS </string>
+
+    <string name="TTS_UTTERANCE_SPLASH_WELCOMEMSG_ID">UtteranceSplashWelcome</string>
+    <string name="TTS_UTTERANCE_HOME_WELCOMEMSG_ID">UtteranceHomeWelcome</string>
+    <string name="TTS_UTTERANCE_HOME_QUIZCLICK_ID">UtteranceQuizClick</string>
+    <string name="TTS_UTTERANCE_QUESTION_ID">UtteranceQuestion</string>
+    <string name="TTS_UTTERANCE_CORRECT_ID">UtteranceCorrect</string>
+    <string name="TTS_UTTERANCE_WRONG_ID">UtteranceWrong</string>
+    <string name="TTS_UTTERANCE_QUIZDONE_ID">UtteranceDone</string>
+
+    <string name="TTS_SPLASH_WELCOME_MSG"> welcome tooo the world of DINOSAURS. Click the green icon to start the fun   </string>
+
+    <string name="TTS_HOME_WELCOME_MSG"> Click the Quiz button, Lets begin the FUN  </string>
+    <string name="TTS_HOME_CLICK_MSG"> Good Luck, %1$s</string>
+
+    <string name="TTS_UTTERANCE_CORRECT_RESP">HUrray, you got it Right</string>
+    <string name="TTS_UTTERANCE_WRONG_RESP">not quite, try again</string>
+
+    <string name="TTS_UTTERANCE_QUIZDONE_AMAZING">Done with the Quiz and you did Amazing , you are a dino expert, %1$s</string>
+    <string name="TTS_UTTERANCE_QUIZDONE_GREAT">Done with the Quiz and you did GREAT, You did well, %1$s</string>
+    <string name="TTS_UTTERANCE_QUIZDONE_GOOD">Done with the Quiz and you did Good , you can do better next time, %1$s</string>
+
+
+</resources>
