@@ -173,6 +173,7 @@ public class GameActivity extends AppCompatActivity implements TTSListener {
     @Override
     protected void onStop() {
         super.onStop();
+        Utils.LogOut(mCtx,"onstop called");
         if(mService != null){
             mService.stop();
         }
