@@ -19,10 +19,10 @@ public class GameState {
 
     }
     public static GameState getInstance(){
-        //if(mInstance == null){
+        if(mInstance == null){
             mInstance = new GameState();
             initObjects();
-       // }
+        }
         return mInstance;
     }
     private static void initObjects(){

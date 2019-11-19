@@ -9,6 +9,9 @@ import dinosaur.sample.com.dinosaur.adapters.LearnAdapter;
 import dinosaur.sample.com.dinosaur.R;
 import dinosaur.sample.com.dinosaur.utils.Utils;
 
+/**
+ * A screen which lists all the dinosaurs along with their names.
+ */
 public class LearnActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
@@ -20,26 +23,13 @@ public class LearnActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_learn);
 
-        Utils.LogOut(this,"getting my recycler view");
         recyclerView = findViewById(R.id.recycler_view);
-        Utils.LogOut(this,"getting my recycler view");
-        //recyclerView.setHasFixedSize(true);
+        recyclerView.setHasFixedSize(true);
 
-//        layoutManager = new LinearLayoutManager(this);
-//        recyclerView.setLayoutManager(layoutManager);
-
-        Utils.LogOut(this,"setting the laypout manager");
-       recyclerView.setLayoutManager(new GridLayoutManager(this,2));
-        Utils.LogOut(this,"done setting the laypout manager");
+        recyclerView.setLayoutManager(new GridLayoutManager(this,2));
 
         mAdapter = new LearnAdapter(this);
-        Utils.LogOut(this,"done creaitn gthe adapter");
-       recyclerView.setAdapter(mAdapter);
-        Utils.LogOut(this,"done setting the adapter");
-         //new newTask().execute();
-
-
-
+        recyclerView.setAdapter(mAdapter);
     }
 
 }

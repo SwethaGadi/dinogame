@@ -16,8 +16,6 @@ import dinosaur.sample.com.dinosaur.utils.voice.TTSService;
 
 public class HomeActivity extends AppCompatActivity implements TTSListener {
 
-    private Button mQuizButton = null;
-    private Button mLearnButton;
     private TTSService mService = null;
     private Context mContext;
     private String mName;
@@ -28,25 +26,7 @@ public class HomeActivity extends AppCompatActivity implements TTSListener {
         setContentView(R.layout.activity_home);
         mContext = this;
 
-        mQuizButton = (Button) findViewById(R.id.quizButton);
-        mLearnButton = (Button) findViewById(R.id.learnButton);
-
         mService = new TTSService(this,this);
-
-        mQuizButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                displayInputNameAlert();
-
-            }
-        });
-
-
-        mLearnButton.setOnClickListener(v -> {
-            Intent i = new Intent(HomeActivity.this, LearnActivity.class);
-            startActivity(i);
-        });
     }
 
     private void launchGameActivity() {
@@ -59,8 +39,8 @@ public class HomeActivity extends AppCompatActivity implements TTSListener {
         startActivity(i);
     }
 
-
-    private void displayInputNameAlert(){
+    //Displays an alert where user can enter his/her name
+    public void displayInputNameAlert(View view){
         AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.MyDialogTheme);
 
         final EditText edittext = new EditText(mContext);
@@ -91,6 +71,11 @@ public class HomeActivity extends AppCompatActivity implements TTSListener {
             }
         });
 
+    }
+
+    public void launchLearnActivity(View view){
+        Intent i = new Intent(HomeActivity.this, LearnActivity.class);
+        startActivity(i);
     }
 
     @Override

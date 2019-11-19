@@ -23,16 +23,21 @@ import dinosaur.sample.com.dinosaur.utils.Utils;
 
 public class GameActivity extends AppCompatActivity implements TTSListener {
 
+    //For now we just have one level game
     private int mLevel = 1;
 
     private TextView mScoreVal = null;
     private TextView mQuestionView = null;
     private ImageButton mDino1, mDino2, mDino3,mDino4 = null;
     private String mQuestionString = null;
+
+    // the view thats been clicked
     private View mSelectedView = null;
 
     private Context mCtx = null;
     private TTSService mService = null;
+
+    // keeps track of the stats of the game
     private GameState mGameState = null;
     private String mUserName;
     private String mReportTitle;
@@ -43,12 +48,12 @@ public class GameActivity extends AppCompatActivity implements TTSListener {
         setContentView(R.layout.activity_game);
 
         mCtx = this;
-        mScoreVal = (TextView) findViewById(R.id.score_value);
-        mQuestionView = (TextView) findViewById(R.id.question_text);
-        mDino1 = (ImageButton) findViewById(R.id.dino_image1);
-        mDino2 = (ImageButton) findViewById(R.id.dino_image2);
-        mDino3 = (ImageButton) findViewById(R.id.dino_image3);
-        mDino4 = (ImageButton) findViewById(R.id.dino_image4);
+        mScoreVal =  findViewById(R.id.score_value);
+        mQuestionView = findViewById(R.id.question_text);
+        mDino1 =  findViewById(R.id.dino_image1);
+        mDino2 = findViewById(R.id.dino_image2);
+        mDino3 =  findViewById(R.id.dino_image3);
+        mDino4 =  findViewById(R.id.dino_image4);
 
         mUserName = getIntent().getStringExtra(getString(R.string.NAME_CONSTANT));
 
@@ -56,9 +61,9 @@ public class GameActivity extends AppCompatActivity implements TTSListener {
         mGameState = GameState.getInstance();
 
         loadValues();
-
     }
 
+    //Updates the question and options
     private void loadValues()
     {
         updateScoreValue();
@@ -89,6 +94,7 @@ public class GameActivity extends AppCompatActivity implements TTSListener {
         mScoreVal.setText(mGameState.getmCorrectCounter()+"/"+mGameState.getmTotalCount());
     }
 
+    //changes the bg of the view to green/red based on the right/wrong answer
     public void validateInput(View view)
     {
         int clickedView = (Integer) view.getTag();
@@ -109,6 +115,7 @@ public class GameActivity extends AppCompatActivity implements TTSListener {
             }
 
         }
+
         mSelectedView = view;
 //        continueQuiz();
     }
@@ -124,6 +131,7 @@ public class GameActivity extends AppCompatActivity implements TTSListener {
         }
     }
 
+    //Once all the questions are done, generates the performace report based on the scores.
     private void handleQuizDone(){
         String doneString;
 
@@ -144,6 +152,7 @@ public class GameActivity extends AppCompatActivity implements TTSListener {
 
     }
 
+    //Once the performace report is generated,this is used to display the same.
     private void displayFinalReport(String text){
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.MyDialogTheme);

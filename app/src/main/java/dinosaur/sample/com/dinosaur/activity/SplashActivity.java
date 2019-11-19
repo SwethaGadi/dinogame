@@ -13,7 +13,6 @@ import dinosaur.sample.com.dinosaur.utils.voice.TTSService;
 
 public class SplashActivity extends AppCompatActivity implements TTSListener {
 
-    private Button goButton = null;
     private Context ctx = null;
     private TTSService mService = null;
 
@@ -25,16 +24,12 @@ public class SplashActivity extends AppCompatActivity implements TTSListener {
         ctx = this;
         mService = new TTSService(ctx,this);
 
-        goButton = (Button) findViewById(R.id.enterButton);
-        goButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+    }
 
-                Intent homeIntent = new Intent(ctx, HomeActivity.class);
-                startActivity(homeIntent);
-                finish();
-            }
-        });
+    public void launchHomeActivity(View view){
+        Intent homeIntent = new Intent(ctx, HomeActivity.class);
+        startActivity(homeIntent);
+        finish();
     }
 
     @Override
@@ -59,6 +54,6 @@ public class SplashActivity extends AppCompatActivity implements TTSListener {
 
     @Override
     public void end(String utteranceID) {
-
+       // TODO : disable the green button intially and enable it once the TTS is done speaking.
     }
 }
