@@ -13,11 +13,11 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import dinosaur.sample.com.dinosaur.Dinosaur;
-import dinosaur.sample.com.dinosaur.GameState;
+import dinosaur.sample.com.dinosaur.data.Dinosaur;
+import dinosaur.sample.com.dinosaur.data.GameState;
 import dinosaur.sample.com.dinosaur.R;
-import dinosaur.sample.com.dinosaur.TTSListener;
-import dinosaur.sample.com.dinosaur.TTSService;
+import dinosaur.sample.com.dinosaur.utils.voice.TTSListener;
+import dinosaur.sample.com.dinosaur.utils.voice.TTSService;
 import dinosaur.sample.com.dinosaur.utils.Utils;
 
 

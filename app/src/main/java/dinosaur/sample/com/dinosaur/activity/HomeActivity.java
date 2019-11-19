@@ -11,8 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import dinosaur.sample.com.dinosaur.R;
-import dinosaur.sample.com.dinosaur.TTSListener;
-import dinosaur.sample.com.dinosaur.TTSService;
+import dinosaur.sample.com.dinosaur.utils.voice.TTSListener;
+import dinosaur.sample.com.dinosaur.utils.voice.TTSService;
 
 public class HomeActivity extends AppCompatActivity implements TTSListener {
 

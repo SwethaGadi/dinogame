@@ -1,5 +1,6 @@
-package dinosaur.sample.com.dinosaur;
+package dinosaur.sample.com.dinosaur.adapters;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,20 +11,25 @@ import android.widget.TextView;
 
 import java.util.HashMap;
 
+import dinosaur.sample.com.dinosaur.R;
+import dinosaur.sample.com.dinosaur.data.Dinosaur;
 import dinosaur.sample.com.dinosaur.utils.Utils;
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
+public class LearnAdapter extends RecyclerView.Adapter<LearnAdapter.ViewHolder> {
 
-    private HashMap<Integer,Dinosaur> values;
+    private HashMap<Integer, Dinosaur> values;
+    private Context mContext;
 
-    public MyAdapter() {
+    public LearnAdapter(Context ctx) {
+        this.mContext = ctx;
         values = Utils.generateGameObjects(0);
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        LayoutInflater inflater = LayoutInflater.from(viewGroup.getContext());
+        Utils.LogOut(mContext , "oncreateViewHolder: "+i);
+        LayoutInflater inflater = LayoutInflater.from(mContext);
         View v = inflater.inflate(R.layout.row_layout,viewGroup,false);
         ViewHolder vh = new ViewHolder(v);
         return vh;
@@ -31,10 +37,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
+        Utils.LogOut(mContext , "onBindViewHolder: "+i);
         Dinosaur dino = values.get(i+1);
         if(dino != null) {
             viewHolder.txtHeader.setText(dino.getName());
-            viewHolder.txtFooter.setText("" + dino.getId());
             viewHolder.imageView.setImageResource(dino.getDrawableID());
         }
 
@@ -48,13 +54,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         public TextView txtHeader;
-        public TextView txtFooter;
         public ImageView imageView;
 
         public ViewHolder(View v){
             super(v);
             txtHeader = (TextView) v.findViewById(R.id.firstLine);
-            txtFooter = (TextView) v.findViewById(R.id.secondLine);
             imageView = (ImageView) v.findViewById(R.id.icon);
         }
 

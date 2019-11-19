@@ -1,4 +1,4 @@
-package dinosaur.sample.com.dinosaur;
+package dinosaur.sample.com.dinosaur.utils.voice;
 
 public interface TTSListener {
 

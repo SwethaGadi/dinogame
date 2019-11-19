@@ -1,4 +1,4 @@
-package dinosaur.sample.com.dinosaur;
+package dinosaur.sample.com.dinosaur.data;
 
 import java.util.ArrayList;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package dinosaur.sample.com.dinosaur;
+package dinosaur.sample.com.dinosaur.utils.voice;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.speech.tts.UtteranceProgressListener;
 
 import java.util.Locale;
 
+import dinosaur.sample.com.dinosaur.R;
 import dinosaur.sample.com.dinosaur.utils.Utils;
 
 public class TTSService extends UtteranceProgressListener implements TextToSpeech.OnInitListener{

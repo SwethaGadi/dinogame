@@ -8,8 +8,8 @@ import android.view.View;
 import android.widget.Button;
 
 import dinosaur.sample.com.dinosaur.R;
-import dinosaur.sample.com.dinosaur.TTSListener;
-import dinosaur.sample.com.dinosaur.TTSService;
+import dinosaur.sample.com.dinosaur.utils.voice.TTSListener;
+import dinosaur.sample.com.dinosaur.utils.voice.TTSService;
 
 public class SplashActivity extends AppCompatActivity implements TTSListener {
 

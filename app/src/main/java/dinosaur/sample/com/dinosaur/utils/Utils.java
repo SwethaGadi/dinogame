@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Random;
 
-import dinosaur.sample.com.dinosaur.Dinosaur;
+import dinosaur.sample.com.dinosaur.data.Dinosaur;
 import dinosaur.sample.com.dinosaur.R;
 
 public class Utils {
@@ -27,16 +27,16 @@ public class Utils {
         mDinoMap.put(2,new Dinosaur(2,"Apatosaurus", R.drawable.dino_2));
         mDinoMap.put(3,new Dinosaur(3,"Euoplocephalus", R.drawable.dino_3));
         mDinoMap.put(4,new Dinosaur(4,"Velociraptor", R.drawable.dino_4));
-//        mDinoMap.put(5,new Dinosaur(5,"Majungasaurus", R.drawable.dino_5));
-//        mDinoMap.put(6,new Dinosaur(6,"Sarcosuchus", R.drawable.dino_6));
-//        mDinoMap.put(7,new Dinosaur(7,"Herrerasaurus", R.drawable.dino_7));
-//        mDinoMap.put(8,new Dinosaur(8,"Spinosaurus", R.drawable.dino_8));
-//        mDinoMap.put(9,new Dinosaur(9,"Dilophosaurus", R.drawable.dino_9));
-//        mDinoMap.put(10,new Dinosaur(10,"Pteranodon", R.drawable.dino_10));
-//        mDinoMap.put(11, new Dinosaur(11,"Diplodocus", R.drawable.dino_11));
-//        mDinoMap.put(12,new Dinosaur(12,"Stegosaurus", R.drawable.dino_12));
-//        mDinoMap.put(13,new Dinosaur(13,"Compsognathus", R.drawable.dino_13));
-//        mDinoMap.put(14,new Dinosaur(14,"Giganotosaurus", R.drawable.dino_14));
+        mDinoMap.put(5,new Dinosaur(5,"Majungasaurus", R.drawable.dino_5));
+        mDinoMap.put(6,new Dinosaur(6,"Sarcosuchus", R.drawable.dino_6));
+        mDinoMap.put(7,new Dinosaur(7,"Herrerasaurus", R.drawable.dino_7));
+        mDinoMap.put(8,new Dinosaur(8,"Spinosaurus", R.drawable.dino_8));
+        mDinoMap.put(9,new Dinosaur(9,"Dilophosaurus", R.drawable.dino_9));
+        mDinoMap.put(10,new Dinosaur(10,"Pteranodon", R.drawable.dino_10));
+        mDinoMap.put(11, new Dinosaur(11,"Diplodocus", R.drawable.dino_11));
+        mDinoMap.put(12,new Dinosaur(12,"Stegosaurus", R.drawable.dino_12));
+        mDinoMap.put(13,new Dinosaur(13,"Compsognathus", R.drawable.dino_13));
+        mDinoMap.put(14,new Dinosaur(14,"Giganotosaurus", R.drawable.dino_14));
 
         return mDinoMap;
     }
